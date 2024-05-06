@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+  <description> Mudanzas De Aqu� Para All� </description>
+  <display-name> Mudanzas De Aqu� Para All� </display-name>
+
+  <servlet>
+    <servlet-name>Servicios</servlet-name>
+    <servlet-class>Servlets.ServiciosServlet</servlet-class>
+    
+    <!-- Parametros -->
+    <init-param>
+      <param-name>ipServidor</param-name>
+      <param-value>127.0.0.1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>puertoServidor</param-name>
+      <param-value>1099</param-value>
+    </init-param>
+    <init-param>
+      <param-name>nombreObjeto</param-name>
+      <param-value>fachada</param-value>
+    </init-param>
+
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Servicios</servlet-name>
+    <url-pattern>/Servicios</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Contratos</servlet-name>
+  	<servlet-class>Servlets.ContratosServlet</servlet-class>
+  	
+  	<!-- Parametros -->
+    <init-param>
+      <param-name>ipServidor</param-name>
+      <param-value>127.0.0.1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>puertoServidor</param-name>
+      <param-value>1099</param-value>
+    </init-param>
+    <init-param>
+      <param-name>nombreObjeto</param-name>
+      <param-value>fachada</param-value>
+    </init-param>
+    
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Contratos</servlet-name>
+  	<url-pattern>/Contratos</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+	<welcome-file>/Menu.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
